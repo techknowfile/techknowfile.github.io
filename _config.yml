@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Techknowfile's Journal"
+title                    : "Techknowfile"
 title_separator          : "-"
 name                     : "Andrew Dudley"
-description              : "Computer scientist. Data scientist. Rock climber. (N)vim lover. Data hoarder."
+description              : "Computer scientist. Data scientist. Rock climber. (Neo)vim lover. Data hoarder."
 url                      : techknowfile.dev
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
