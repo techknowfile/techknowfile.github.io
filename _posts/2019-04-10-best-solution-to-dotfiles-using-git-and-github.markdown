@@ -3,7 +3,7 @@ layout: post
 title: "Best solution to dotfiles using git and github"
 date: "2019-04-10 12:27:37 -0700"
 ---
-
+<p class='notice--danger'><b>Warning!</b> If caution isn't taken with the instructions below, you may accidently delete your dotfiles. I highly recommend backing up your dotfiles just in case.</p>
 ## Setting up your dotfiles
 1. Create an empty github repo for your dotfiles.
 	```
@@ -19,6 +19,12 @@ date: "2019-04-10 12:27:37 -0700"
 	cp ~/dotfiles-tmp/. ~ -r
 	```
 
+1. Remove the ~/.git file
+   ```sh
+   rm ~/.git
+   ```
+   <p class="notice--warning"><b>Warning!</b> If you get warnings about a directory not being a git repo, or if your shell becomes very slow / zgen starts throwing errors, you probably forgot to delete this.</p>
+
 3. Delete the temporary directory.
 	```sh
 	rm ~/dotfiles-tmp -r
@@ -33,21 +39,6 @@ date: "2019-04-10 12:27:37 -0700"
 	```sh
 	source ~/.zshrc
 	```
-
-6. To prevent every directory in your home directory from being detected as part of a git repo (and so that powerline doesn't show a branch name in every directory), run the following:
-	```sh
-	mkdir ~/.dotfiles/.dotfiles
-	```
-	And then edit ~/.git to point to that new, empty directory. For example:
-	```
-	gitdir: .dotfiles/.dotfiles
-	```
-	<p class="notice--danger">
-	<b>Warning!</b> If you don't make this edit, zgen and other applications may cause your terminal to lag terribly.
- 	<br />
-	This file cannot be added to your dotfiles repo. Haven't found a better solution than creating it every time. 
-	<b>Update:</b> Just kidding, better off just deleting the ~/.git file that is being copied over from dotfiles-tmp
-	</p>	
 
 7. To prevent `$ dotfiles status` from displaying every file in your home directory as being untracked, run:
 	```sh
@@ -69,7 +60,7 @@ date: "2019-04-10 12:27:37 -0700"
 	#!/bin/sh
 	git clone "--separate-git-dir=$HOME/.dotfiles" https://github.com/$1/dotfiles $HOME/dotfiles-tmp
 	cp ~/dotfiles-tmp/. ~ -r
-	echo 'gitdir: .dotfiles/.dotfiles' > ~/.git
+	rm ~/.git
 	rm ~/dotfiles-tmp -r
 	```
 	To use my script:
@@ -78,5 +69,3 @@ date: "2019-04-10 12:27:37 -0700"
 	sudo chmod +x ./dotfiles.sh
 	./dotfiles.sh YOURGITHUBUSERNAME
 	```
-
-
