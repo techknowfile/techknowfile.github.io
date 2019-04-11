@@ -46,6 +46,7 @@ date: "2019-04-10 12:27:37 -0700"
 	<b>Warning!</b> If you don't make this edit, zgen and other applications may cause your terminal to lag terribly.
  	<br />
 	This file cannot be added to your dotfiles repo. Haven't found a better solution than creating it every time. 
+	<b>Update:</b> Just kidding, better off just deleting the ~/.git file that is being copied over from dotfiles-tmp
 	</p>	
 
 7. To prevent `$ dotfiles status` from displaying every file in your home directory as being untracked, run:
