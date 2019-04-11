@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Best solution to dotfiles using git and github"
+title: "Managing Dotfiles with Git and Github"
 date: "2019-04-10 12:27:37 -0700"
 ---
 <p class='notice--danger'><b>Warning!</b> If caution isn't taken with the instructions below, you may accidently delete your dotfiles. I highly recommend backing up your dotfiles just in case.</p>
