@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: single
 title: "Managing Dotfiles with Git and Github"
 excerpt: "Never leave home without your dotfiles again! Looking for the perfect solution to managing your dotfiles without using symlinks or other application? This configuration will allow you to easily migrate your dotfiles to every unix machine you touch while maintaining version control."
 date: "2019-04-10 12:27:37 -0700"
+toc: true
 ---
-Looking for the perfect solution to managing your dotfiles without using symlinks or other application? This configuration will allow you to easily migrate your dotfiles to every unix machine you touch while maintaining version control. 
+Looking for the perfect solution to managing your dotfiles without having to use symlinks? This configuration will allow you to easily migrate your dotfiles to every unix machine you touch while maintaining version control. 
 
 Never leave home without your dotfiles again!
 <p class='notice--success'>Full credit for this solution goes to StreakyCobra, seliopou, and telotortium at <a href="https://news.ycombinator.com/item?id=11070797">ycombinator forums</a>. Thank you, guys!</p>
@@ -49,7 +50,7 @@ Never leave home without your dotfiles again!
 	dotfiles config status.showUntrackedFiles no
 	```
 
-## Adding dotfiles
+## Adding dotfiles to the git repo
 * Use `dotfiles` command the same way you would use the `git` command.
 	```sh
 	dotfiles add ~/.zshrc ~/.tmux.conf
@@ -57,7 +58,7 @@ Never leave home without your dotfiles again!
 	dotfiles push
 	```
 
-## Get dotfiles on new computer
+## Pulling dotfiles to new machines
 * Simply do steps 2, 3, 4, and 5 from the initial setup instructions.
 * Or... you could make a [script](/scripts/dotfiles.sh) on another gitrepo or on your github pages that runs those steps for you.
 	```sh
