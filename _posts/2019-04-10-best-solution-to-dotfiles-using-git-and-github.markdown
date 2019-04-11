@@ -40,12 +40,13 @@ date: "2019-04-10 12:27:37 -0700"
 	```
 	And then edit ~/.git to point to that new, empty directory. For example:
 	```
-	gitdir: /home/techknowfile/.dotfiles/.dotfiles
+	gitdir: .dotfiles/.dotfiles
 	```
-	Finally, add it to your dotfiles repo.
-	```sh
-	dotfiles add ~/.git
-	```
+	<p class="notice--danger">
+	<b>Warning!</b> If you don't make this edit, zgen and other applications may cause your terminal to lag terribly.
+ 	<br />
+	This file cannot be added to your dotfiles repo. Haven't found a better solution than creating it every time. 
+	</p>	
 
 7. To prevent `$ dotfiles status` from displaying every file in your home directory as being untracked, run:
 	```sh
@@ -62,11 +63,12 @@ date: "2019-04-10 12:27:37 -0700"
 
 ## Get dotfiles on new computer
 * Simply do steps 2, 3, 4, and 6 from the initial setup instructions.
-* You could make a [script](scripts/dotfiles.sh) on another gitrepo or on your github pages that runs those steps for you.
+* Or... you could make a [script](scripts/dotfiles.sh) on another gitrepo or on your github pages that runs those steps for you.
 	```sh
 	#!/bin/sh
 	git clone "--separate-git-dir=$HOME/.dotfiles" https://github.com/$1/dotfiles $HOME/dotfiles-tmp
 	cp ~/dotfiles-tmp/. ~ -r
+	echo 'gitdir: .dotfiles/.dotfiles' > ~/.git
 	rm ~/dotfiles-tmp -r
 	```
 	To use my script:
