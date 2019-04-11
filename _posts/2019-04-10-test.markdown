@@ -1,0 +1,8 @@
+---
+layout: post
+title: "test"
+date: "2019-04-10 17:47:37 -0700"
+---
+just a github test for vim config. will delete
+
+
