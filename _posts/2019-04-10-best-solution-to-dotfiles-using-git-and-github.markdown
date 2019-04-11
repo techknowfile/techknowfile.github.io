@@ -59,7 +59,7 @@ Never leave home without your dotfiles again!
 
 ## Get dotfiles on new computer
 * Simply do steps 2, 3, 4, and 5 from the initial setup instructions.
-* Or... you could make a [script](scripts/dotfiles.sh) on another gitrepo or on your github pages that runs those steps for you.
+* Or... you could make a [script](/scripts/dotfiles.sh) on another gitrepo or on your github pages that runs those steps for you.
 	```sh
 	#!/bin/sh
 	git clone "--separate-git-dir=$HOME/.dotfiles" https://github.com/$1/dotfiles $HOME/dotfiles-tmp
