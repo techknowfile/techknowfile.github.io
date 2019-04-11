@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Andrew Dudley"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/me.jpeg"
   bio              : "Computer scientist. Data scientist. Rock climber. (N)vim lover. Data hoarder."
   location         : "Tempe, AZ"
   email            :
