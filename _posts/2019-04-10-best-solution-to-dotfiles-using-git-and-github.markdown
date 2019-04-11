@@ -8,7 +8,7 @@ toc: true
 Looking for the perfect solution to managing your dotfiles without having to use symlinks? This configuration will allow you to easily migrate your dotfiles to every unix machine you touch while maintaining version control. 
 
 Never leave home without your dotfiles again!
-<p class='notice--success'>Full credit for this solution goes to StreakyCobra, seliopou, and telotortium at <a href="https://news.ycombinator.com/item?id=11070797">ycombinator forums</a>. Thank you, guys!</p>
+<p class='notice--success'>Full credit for this solution goes to <a href="https://news.ycombinator.com/user?id=StreakyCobra">StreakyCobra</a>, <a href="https://news.ycombinator.com/user?id=seliopou">seliopou</a>, and <a href="https://news.ycombinator.com/user?id=telotortium">telotortium</a> on the <a href="https://news.ycombinator.com/item?id=11070797">Y Combinator forums</a>. Thank you, guys!</p>
 <p class='notice--danger'><b>Warning!</b> If caution isn't taken with the instructions below, you may accidently delete your dotfiles. I highly recommend backing up your dotfiles just in case.</p>
 ## Setting up your dotfiles
 1. Create an empty github repo for your dotfiles.
