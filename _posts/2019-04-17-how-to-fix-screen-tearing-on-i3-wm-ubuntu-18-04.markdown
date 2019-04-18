@@ -5,7 +5,7 @@ date: "2019-04-17 20:26:18 -0700"
 toc: true
 ---
 
-I love i3. I've loved it since the day I started using it. The only time that i3 bothered me was when trying to watch a movie... or scroll on a web page... or do basically anything else that would make prevalent just how bad the screen tearing was.
+I love i3. I've loved it since the day I started using it. The only time that i3 bothered me was when trying to watch a movie... or scroll on a web page... or do basically anything else that would make prevalent just how bad the screen tearing was. Disabling compton didn't fix it. Enabling compton didn't fix it.
 
 I've faced this issue on every machine running i3, and the solution has been different dependent on the hardware of the machine.  Some machines, such as my XPS 15 laptop, have two graphics cards. In my case, an NVIDIA GeForce GTX 960M and an onboard intel card. Nvidia PRIME allows you to control which monitor is using which graphics card. Any machine using Nvidia PRIME will not allow you to use the ForceFullCompositionPipeline setting that every other post on this issue recommends. Instead, at least on Ubuntu 18.04, you need to enable Prime Synchronization, which requires several modifications to system configuration files.
 
