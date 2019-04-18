@@ -69,5 +69,6 @@ Aka, enabling PRIME Synchronization. Unforunately, this is not as straightforwar
 	xrandr --output eDP-1-1 --set "PRIME Synchronization" 1
 	```
 	To make this setting persist, you can add the command to your i3 config file, or maybe .xinitrc. Maybe you can use the `Save to X Configuration File` setting within nvidia-settings instead. Dunno, haven't tested.
+    <p class='notice--warning'>**Get an error?** If you get an error to the effect of `X Error of failed request:  BadName (named color or font does not exist)`, make sure that xserver-xorg v1.19 is installed, as mentioned above.</p>
 
 If all went smoothly, screen tearing should now be a thing of the past!
