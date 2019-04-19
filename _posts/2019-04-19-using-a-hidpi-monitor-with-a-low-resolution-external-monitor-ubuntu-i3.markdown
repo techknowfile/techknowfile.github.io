@@ -12,7 +12,7 @@ Just a quick post to document how I finally got my XPS 15 3840x2160 monitor work
 ## The problem
 Using a HiDPI monitor with 2x scale set. Connecting an external, lower dpi monitor results in everything on that monitor also being scaled 2x, making them way too big. i3 status bar, browser address bars, etc become unusable.
 
-I had tried [manually configuring the xrandr settings](https://blog.summercat.com/configuring-mixed-dpi-monitors-with-xrandr.html), but it wouldn't work properly. The external monitor would not allow me to change the panning, so even if I could get it to display properly, the mouse itself could only move through a limited portion of the screen before hitting an edge. Using the --panning flag with any value results in this error
+I had tried [manually configuring the xrandr settings](https://blog.summercat.com/configuring-mixed-dpi-monitors-with-xrandr.html), but it wouldn't work properly. The external monitor would not allow me to change the panning, so even if I could get it to display properly, the mouse itself could only move through a limited portion of the screen before hitting an edge. Using the `--panning` flag with any value results in this error
 <p class="notice--danger">X Error of failed request:  BadMatch (invalid parameter attributes)
   Major opcode of failed request:  140 (RANDR)
   Minor opcode of failed request:  29 (RRSetPanning)
