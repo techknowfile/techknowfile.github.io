@@ -36,9 +36,9 @@ Finally, I ran the following xrandr command
 ```sh
 xrandr --dpi 276 --output eDP-1-1 --mode 3840x2160 --output HDMI-1-1  --scale 2x2 --pos 3840x0
 ```
-Notice that specifying --fb and --panning were not necessary (and, in fact, the --panning command still doesn't work for me).
+Notice that specifying `--fb` and `--panning` were not necessary (and, in fact, the `--panning` command still doesn't work for me).
 
 ## Other issues to note
 * When trying to update to the latest LTS, my root partition didn't have enough memory to download the 8GB update. Had to clear space.
 * When first logging into i3 after the update, none of my windows were appearing and the monitors starting glitching terribly. This was caused by my dual kawase blur build of compton. Had to rebuild
-* After rebuilding compton, everything was very laggy (switching and resizing windows, etc). This is related to the --backend "glx" setting. I've disabled it for now. Need to find a fix, because kawase doesn't work with the "xrender" backend. It may be interfering with nvidia driver / Prime Synchronization, though they worked fine together on 16.04 before the update.
+* After rebuilding compton, everything was very laggy (switching and resizing windows, etc). This is related to the `--backend "glx"` setting. I've disabled it for now. Need to find a fix, because kawase doesn't work with the "xrender" backend. It may be interfering with nvidia driver / Prime Synchronization, though they worked fine together on 16.04 before the update.
