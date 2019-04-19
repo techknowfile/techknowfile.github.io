@@ -21,7 +21,7 @@ I had tried [manually configuring the xrandr settings](https://blog.summercat.co
 </p>
 
 ## The cause
-After some research, it turns out [there is a bug in xserver-xorg version < 1.20](https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/883319) in which the cursor constraints are not modified properly when using --scale. Xserver 1.20  was released with Ubuntu 18.10, and is now available for Ubuntu 18.04 via the xserver-xorg-hwe-18.04 package. **Unfortunately, this package is not available for Ubuntu 16.04.** While it may technically be possible to build it yourself and replace all the dependent packages, it's probably more trouble than it's worth.
+After some research, it turns out [there is a bug in xserver-xorg version < 1.20](https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/883319) in which the cursor constraints are not modified properly when using `--scale`. Xserver 1.20  was released with Ubuntu 18.10, and is now available for Ubuntu 18.04 via the xserver-xorg-hwe-18.04 package. **Unfortunately, this package is not available for Ubuntu 16.04.** While it may technically be possible to build it yourself and replace all the dependent packages, it's probably more trouble than it's worth.
 
 ## The Solution
 I upgraded from Ubuntu 16.04 to Ubuntu 18.04 using
