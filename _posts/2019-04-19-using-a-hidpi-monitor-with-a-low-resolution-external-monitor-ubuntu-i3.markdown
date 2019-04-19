@@ -28,6 +28,7 @@ I upgraded from Ubuntu 16.04 to Ubuntu 18.04 using
 ```sh
 sudo do-release-upgrade
 ```
+<p class="notice--danger"><b>Danger!</b> Upgrading your Ubuntu version may break packages that you  have installed, rendering your distro broken until you fix it. Make sure you <a href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes">know what you're doing</a> before running this command!</p>
 The upgrade took a couple of hours. After successfully upgrading to Ubuntu 18.04, I installed the hardware acceleration package:
 ```sh
 sudo apt install xserver-xorg-hwe-18
