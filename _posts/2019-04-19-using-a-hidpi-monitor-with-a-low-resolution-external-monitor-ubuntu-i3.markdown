@@ -9,6 +9,10 @@ Just a quick post to document how I finally got my XPS 15 3840x2160 monitor work
 * Ubuntu 16.04
 * i3-gaps (4.16.1-166-g007218a8)
 
+**TL;DR**
+* Install xserver-xorg-hwe-18.04 (requires Ubuntu 18.04 or higher)
+* Use NVIDIA driver 415, but not 418 if you also use compton. NVIDIA 3XX drivers cause the secondary monitor to not show the entire workspace, and 418 caused terrible lag when used in conjuction with compton and `--backend glx`. 
+
 ## The problem
 Using a HiDPI monitor with 2x scale set. Connecting an external, lower dpi monitor results in everything on that monitor also being scaled 2x, making them way too big. i3 status bar, browser address bars, etc become unusable.
 
@@ -20,7 +24,7 @@ I had tried [manually configuring the xrandr settings](https://blog.summercat.co
   Current serial number in output stream:  40
 </p>
 
-## The cause
+## The Cause
 After some research, it turns out [there is a bug in xserver-xorg version < 1.20](https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/883319) in which the cursor constraints are not modified properly when using `--scale`. Xserver 1.20  was released with Ubuntu 18.10, and is now available for Ubuntu 18.04 via the xserver-xorg-hwe-18.04 package. **Unfortunately, this package is not available for Ubuntu 16.04.** While it may technically be possible to build it yourself and replace all the dependent packages, it's probably more trouble than it's worth.
 
 ## The Solution
