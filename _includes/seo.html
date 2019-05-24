@@ -61,6 +61,8 @@
 
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author }}">
+{% else %}
+  <meta name="author" content="Andrew Dudley">
 {% endif %}
 
 <meta property="og:type" content="{{ og_type }}">
